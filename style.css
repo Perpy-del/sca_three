@@ -68,6 +68,8 @@ body {
   font-size: 1.2rem;
 }
 
+/* Pricing */
+
 .pricing {
   padding: 50px 0 20px;
   text-align: center;
@@ -109,7 +111,7 @@ p {
 .pricing-card span {
   display: block;
   padding-bottom: 5px;
-  color: #212529BF;
+  color: #212529bf;
   font-weight: 300;
 }
 
@@ -124,12 +126,12 @@ p {
 }
 
 .pricing-card:nth-child(2) h2 {
-    background-color: #f7f8fa;
+  background-color: #f7f8fa;
 }
 
 .pricing-card:nth-child(3) h2 {
-    background-color: #0d6efd;
-    color: var(--bs-body-bg);
+  background-color: #0d6efd;
+  color: var(--bs-body-bg);
 }
 
 .pricing-card div {
@@ -179,8 +181,37 @@ p {
 }
 
 .pricing-card:last-child {
-    border: 1px solid #0b5ed7;
+  border: 1px solid #0b5ed7;
 }
+
+/* Compare plans */
+.compare-plans h1 {
+  text-align: center;
+  padding: 30px 0 20px;
+  font-weight: 300;
+  color: #212529bf;
+  font-size: 2rem;
+}
+
+.compare-table-container {
+  width: 100%;
+}
+
+.compare-table-container th {
+  text-align: left;
+  width: 24%;
+  padding-right: 5px;
+}
+
+.compare-table-container tr, .compare-table-container thead tr th {
+  text-align: center;
+}
+
+.compare-table-container th, td {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
 
 @media (min-width: 768px) {
   .body-container nav {
@@ -251,46 +282,52 @@ p {
 }
 
 @media (min-width: 2560px) {
-    .body-container {
-        padding: 16px 700px;
-      }
+  .body-container {
+    padding: 16px 700px;
+  }
 
-      .body-container nav {
-        width: 100%;
-      }
+  .body-container nav {
+    width: 100%;
+  }
 
-      .body-container nav ul {
-        font-size: 20px;
-        width: 400px;
-        padding: 30px 0;
-      }
+  .body-container nav ul {
+    font-size: 20px;
+    width: 400px;
+    padding: 30px 0;
+  }
 
-      .pricing h1 {
-        font-size: 4rem;
-      }
+  /* Pricing */
 
-      .pricing p {
-        width: 70%;
-        font-size: 24px;
-        line-height: 36px;
-        padding-bottom: 50px;
-      }
+  .pricing h1 {
+    font-size: 4rem;
+  }
 
-      .pricing-card h2 {
-        font-size: 1.8rem;
-        padding: 25px 0;
-      }
+  .pricing p {
+    width: 70%;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 50px;
+  }
 
-      .pricing-card div h3 {
-        font-size: 2.5rem;
-      }
+  .pricing-card h2 {
+    font-size: 1.8rem;
+    padding: 25px 0;
+  }
 
-      .pricing-card div span {
-        font-size: 20px;
-      }
+  .pricing-card div h3 {
+    font-size: 2.5rem;
+  }
 
-      .pricing-card div button {
-        font-size: 24px;
-        padding: 18px 0;
-      }
+  .pricing-card div span {
+    font-size: 20px;
+  }
+
+  .pricing-card div button {
+    font-size: 24px;
+    padding: 18px 0;
+  }
+
+  .compare-plans h1 {
+    font-size: 4rem;
+  }
 }
