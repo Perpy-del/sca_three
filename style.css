@@ -195,6 +195,7 @@ p {
 
 .compare-table-container {
   width: 100%;
+  margin-bottom: 15px;
 }
 
 .compare-table-container th {
@@ -209,7 +210,51 @@ p {
 
 .compare-table-container th, td {
   padding: 10px 0;
-  border-bottom: 1px solid var(--bs-border-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+/* Footer */
+.footer-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+.logo-copyright {
+  padding-bottom: 20px;
+}
+
+.logo-copyright h6 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shortcuts div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shortcuts div h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.shortcuts div span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.shortcuts div span:hover {
+  color: #212529bf;
 }
 
 
@@ -259,6 +304,15 @@ p {
   .pricing-card div h3 {
     font-size: 2rem;
   }
+
+  .footer-container {
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .shortcuts {
+    gap: 80px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -268,6 +322,19 @@ p {
 
   .body-container nav {
     padding-top: 20px;
+  }
+
+  .compare-table-container {
+    padding-bottom: 50px;
+  }
+
+  .footer-container {
+    padding-top: 50px;
+    gap: 200px;
+  }
+
+  .shortcuts {
+    gap: 120px;
   }
 }
 
@@ -326,6 +393,8 @@ p {
     font-size: 24px;
     padding: 18px 0;
   }
+
+  /* Compare plans */
 
   .compare-plans h1 {
     font-size: 4rem;
