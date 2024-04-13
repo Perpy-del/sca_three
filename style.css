@@ -5,6 +5,7 @@
   --bs-gray: #6c757d;
   --bs-body-text: #000000;
   --bs-border-color: #dee2e6;
+  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
 *,
@@ -67,6 +68,196 @@ body {
   font-size: 1.2rem;
 }
 
+/* Pricing */
+
+.pricing {
+  padding: 50px 0 20px;
+  text-align: center;
+}
+
+.pricing h1,
+p {
+  width: 90%;
+  margin: auto;
+}
+
+.pricing h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.pricing p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #212529bf;
+  padding-bottom: 20px;
+}
+
+.pricing-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pricing-card {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  box-shadow: var(--bs-box-shadow-sm);
+  border-radius: 0.5rem;
+}
+
+.pricing-card span {
+  display: block;
+  padding-bottom: 5px;
+  color: #212529bf;
+  font-weight: 300;
+}
+
+.pricing-card h2 {
+  width: 100%;
+  background-color: #f7f8fa;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+  font-weight: 400;
+  font-size: 1.3rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.pricing-card:nth-child(2) h2 {
+  background-color: #f7f8fa;
+}
+
+.pricing-card:nth-child(3) h2 {
+  background-color: #0d6efd;
+  color: var(--bs-body-bg);
+}
+
+.pricing-card div {
+  padding: 15px;
+}
+
+.pricing-card div h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+
+.pricing-card div button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0.5rem;
+  outline: none;
+  margin-top: 15px;
+  font-size: 20px;
+  font-family: inherit;
+}
+
+.pricing-card:first-child div button {
+  border: 1px solid #0d6efd;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #0d6efd;
+}
+
+.pricing-card:first-child div button:hover {
+  color: var(--bs-body-bg);
+  background-color: #0d6efd;
+}
+
+.pricing-card:nth-child(2) div button,
+.pricing-card:nth-child(3) div button {
+  border: none;
+  background-color: #0d6efd;
+  color: var(--bs-body-bg);
+}
+
+.pricing-card:nth-child(2) div button:hover,
+.pricing-card:nth-child(3) div button:hover {
+  border: none;
+  background-color: #0b5ed7;
+  color: var(--bs-body-bg);
+}
+
+.pricing-card:last-child {
+  border: 1px solid #0b5ed7;
+}
+
+/* Compare plans */
+.compare-plans h1 {
+  text-align: center;
+  padding: 30px 0 20px;
+  font-weight: 300;
+  color: #212529bf;
+  font-size: 2rem;
+}
+
+.compare-table-container {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.compare-table-container th {
+  text-align: left;
+  width: 24%;
+  padding-right: 5px;
+}
+
+.compare-table-container tr, .compare-table-container thead tr th {
+  text-align: center;
+}
+
+.compare-table-container th, td {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+/* Footer */
+.footer-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.175);
+}
+
+.logo-copyright {
+  padding-bottom: 20px;
+}
+
+.logo-copyright h6 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shortcuts div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shortcuts div h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.shortcuts div span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.shortcuts div span:hover {
+  color: #212529bf;
+}
+
+
 @media (min-width: 768px) {
   .body-container nav {
     display: flex;
@@ -103,6 +294,25 @@ body {
     text-decoration: none;
     color: var(--bs-body-color);
   }
+
+  /* pricing */
+
+  .pricing-card-container {
+    flex-direction: row;
+  }
+
+  .pricing-card div h3 {
+    font-size: 2rem;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .shortcuts {
+    gap: 80px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -113,6 +323,19 @@ body {
   .body-container nav {
     padding-top: 20px;
   }
+
+  .compare-table-container {
+    padding-bottom: 50px;
+  }
+
+  .footer-container {
+    padding-top: 50px;
+    gap: 200px;
+  }
+
+  .shortcuts {
+    gap: 120px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -122,5 +345,58 @@ body {
 
   .body-container nav {
     padding-top: 0px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .body-container {
+    padding: 16px 700px;
+  }
+
+  .body-container nav {
+    width: 100%;
+  }
+
+  .body-container nav ul {
+    font-size: 20px;
+    width: 400px;
+    padding: 30px 0;
+  }
+
+  /* Pricing */
+
+  .pricing h1 {
+    font-size: 4rem;
+  }
+
+  .pricing p {
+    width: 70%;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 50px;
+  }
+
+  .pricing-card h2 {
+    font-size: 1.8rem;
+    padding: 25px 0;
+  }
+
+  .pricing-card div h3 {
+    font-size: 2.5rem;
+  }
+
+  .pricing-card div span {
+    font-size: 20px;
+  }
+
+  .pricing-card div button {
+    font-size: 24px;
+    padding: 18px 0;
+  }
+
+  /* Compare plans */
+
+  .compare-plans h1 {
+    font-size: 4rem;
   }
 }
